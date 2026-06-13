@@ -1,0 +1,9 @@
+# Backups the installer creates in-place
+*.bak
+*.bak.*
+
+# macOS
+.DS_Store
+
+# node (in case anyone runs npm inside the repo)
+node_modules/

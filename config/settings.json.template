@@ -1,0 +1,154 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "anim",
+        "type": "custom-command",
+        "commandPath": "__CONFIG_DIR__/anim-widget.sh",
+        "preserveColors": true,
+        "timeout": 500
+      },
+      {
+        "id": "anim-sep",
+        "type": "separator",
+        "character": " "
+      },
+      {
+        "id": "git-root",
+        "type": "git-root-dir",
+        "color": "magenta",
+        "rawValue": true,
+        "metadata": { "hideNoGit": "true" }
+      },
+      {
+        "id": "git-dot",
+        "type": "separator",
+        "character": " · "
+      },
+      {
+        "id": "git-branch",
+        "type": "git-branch",
+        "color": "magenta",
+        "rawValue": true,
+        "metadata": { "hideNoGit": "true" }
+      },
+      {
+        "id": "sep-1",
+        "type": "separator",
+        "character": " │ "
+      },
+      {
+        "id": "ctx-cmd",
+        "type": "custom-command",
+        "commandPath": "__CONFIG_DIR__/ctx-color.sh",
+        "preserveColors": true,
+        "timeout": 2000
+      },
+      {
+        "id": "sep-dot-0",
+        "type": "separator",
+        "character": " · "
+      },
+      {
+        "id": "cost",
+        "type": "session-cost",
+        "color": "brightBlack",
+        "rawValue": true
+      },
+      {
+        "id": "flex-1",
+        "type": "flex-separator"
+      },
+      {
+        "id": "session-cmd",
+        "type": "custom-command",
+        "commandPath": "__CONFIG_DIR__/session-color.sh",
+        "preserveColors": true,
+        "timeout": 2000
+      },
+      {
+        "id": "sep-dot-1",
+        "type": "separator",
+        "character": " · "
+      },
+      {
+        "id": "session-reset-icon",
+        "type": "custom-text",
+        "customText": "↺",
+        "color": "brightBlack"
+      },
+      {
+        "id": "session-reset-space",
+        "type": "separator",
+        "character": " "
+      },
+      {
+        "id": "session-reset",
+        "type": "reset-timer",
+        "color": "brightBlack",
+        "rawValue": true
+      },
+      {
+        "id": "sep-pipe-1",
+        "type": "separator",
+        "character": " │ "
+      },
+      {
+        "id": "wk-cmd",
+        "type": "custom-command",
+        "commandPath": "__CONFIG_DIR__/wk-color.sh",
+        "preserveColors": true,
+        "timeout": 2000
+      },
+      {
+        "id": "sep-dot-2",
+        "type": "separator",
+        "character": " · "
+      },
+      {
+        "id": "reset-icon",
+        "type": "custom-text",
+        "customText": "↺",
+        "color": "brightBlack"
+      },
+      {
+        "id": "reset-space",
+        "type": "separator",
+        "character": " "
+      },
+      {
+        "id": "weekly-reset",
+        "type": "weekly-reset-timer",
+        "color": "brightBlack",
+        "rawValue": true
+      }
+    ],
+    [],
+    []
+  ],
+  "flexMode": "full",
+  "compactThreshold": 60,
+  "colorLevel": 3,
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "gitCacheTtlSeconds": 5,
+  "minimalistMode": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [],
+    "autoAlign": false,
+    "continueThemeAcrossLines": false
+  },
+  "installation": {
+    "method": "auto-update",
+    "packageManager": "npm"
+  }
+}
