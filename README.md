@@ -44,21 +44,36 @@ cd cc-better-statusline
 That will:
 
 1. Install the pinned `ccstatusline@2.2.19` binary into `~/.local/share/ccstatusline`.
-2. Copy the scripts + animation data into `~/.config/ccstatusline` (rewriting paths to your `$HOME`).
-3. Write `~/.config/ccstatusline/settings.json` (the widget layout).
-4. Merge a `statusLine` block into `~/.claude/settings.json`, preserving everything else.
+2. Ask whether you want the **animated spinner**, showing a live braille preview while you decide.
+3. Copy the scripts (+ animation data, if you opted in) into `~/.config/ccstatusline`, rewriting paths to your `$HOME`.
+4. Write `~/.config/ccstatusline/settings.json` (the widget layout).
+5. Merge a `statusLine` block into `~/.claude/settings.json`, preserving everything else.
 
 Everything it overwrites is backed up first (`*.bak.<timestamp>`). Re-running is safe and idempotent;
 it won't clobber your `anim-playlist` selection.
 
 Restart Claude Code (or just wait for the next repaint) and you're done.
 
+### The animation prompt
+
+```
+  ⠹  Include the animated spinner? [Y/n]
+```
+
+The braille glyph spins (in the status line's color gradient) while it waits. Press **Enter** or **y**
+to include it, **n** to omit it. Decline and you get the exact same layout minus the spinner — and the
+animation files aren't installed at all. You can change your mind later by re-running with a flag below.
+
 ### Install flags
 
 | Flag | Effect |
 |------|--------|
+| `--animations` | Include the spinner without prompting. |
+| `--no-animations` | Omit the spinner without prompting. |
 | `--no-claude` | Install the files but don't touch `~/.claude/settings.json` (it prints the block to add yourself). |
 | `--width-fix` | Also append a `precmd` to `~/.zshrc` that closes the ~6-char gap on the right edge (see below). |
+
+When stdin isn't a tty (piped/CI) and neither animation flag is given, the spinner is included by default.
 
 ## Picking animations
 
